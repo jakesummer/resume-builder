@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Panel from "../Panel/Panel.jsx";
 import PersonalInfoForm from "./PersonalInfoForm/PersonalInfoForm.jsx";
+import EducationPanel from "./EducationPanel/EducationPanel.jsx";
 
 export default function Sidebar({
   data,
@@ -25,6 +26,23 @@ export default function Sidebar({
         <PersonalInfoForm
           data={data.personalInfo}
           onChange={onPersonalInfoChange}
+        />
+      ),
+    },
+    {
+      index: 1,
+      title: "Education",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" />
+        </svg>
+      ),
+      children: (
+        <EducationPanel
+          data={data.education}
+          onAddItem={onAddItem}
+          onChange={onItemChange}
+          onDeleteItem={onDeleteItem}
         />
       ),
     },
