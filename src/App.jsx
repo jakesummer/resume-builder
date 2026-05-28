@@ -48,8 +48,11 @@ function App() {
     const setter = arrayStateSetters[section];
     if (!setter) return;
 
-    const newItem = { id: crypto.randomUUID(), ...item };
+    const newId = crypto.randomUUID();
+    const newItem = { id: newId, ...item };
     setter((prev) => [...prev, newItem]);
+
+    return newId;
   }
 
   function handleArrayItemChange(section, id, fieldName, value) {

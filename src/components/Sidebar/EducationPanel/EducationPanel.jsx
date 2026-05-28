@@ -36,16 +36,16 @@ export default function EducationPanel({
   onChange,
   onDeleteItem,
 }) {
-  const [activeIndex, setActiveIndex] = useState(-1); // current index of education data being edited
+  const [activeId, setActiveId] = useState(-1); // current id of education data being edited, -1 if none
 
   function handleNewEducation() {
-    onAddItem("education", initialEducationData);
-    setActiveIndex(data.length);
+    const newId = onAddItem("education", initialEducationData);
+    setActiveId(newId);
   }
 
   return (
     <>
-      {activeIndex === -1 &&
+      {activeId === -1 &&
         data.length > 0 &&
         data
           .filter((d) => d.school)
@@ -59,7 +59,7 @@ export default function EducationPanel({
             );
           })}
 
-      {activeIndex === -1 && (
+      {activeId === -1 && (
         <button onClick={handleNewEducation}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>add</title>
@@ -69,10 +69,13 @@ export default function EducationPanel({
         </button>
       )}
 
-      {activeIndex !== -1 && (
+      {activeId !== -1 && (
         <>
-          <EducationForm data={data[activeIndex]} onFormChange={onChange} />
-          <SaveButton stateSetter={setActiveIndex} />
+          <EducationForm
+            data={data.find((d) => d.id === activeId)}
+            onFormChange={onChange}
+          />
+          <SaveButton stateSetter={setActiveId} />
         </>
       )}
     </>
