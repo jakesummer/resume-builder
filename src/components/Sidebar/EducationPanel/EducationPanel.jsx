@@ -55,6 +55,7 @@ export default function EducationPanel({
                 key={d.id}
                 school={d.school}
                 onDelete={() => onDeleteItem("education", d.id)}
+                onEdit={() => setActiveId(d.id)}
               />
             );
           })}
