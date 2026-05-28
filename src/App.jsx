@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import ResumeRender from "./components/ResumeRender/ResumeRender.jsx";
 
 const initialData = {
   personalInfo: {
@@ -40,7 +41,6 @@ function App() {
 
   function handlePersonalInfoChange(e) {
     const { name, value } = e.target;
-    console.log(name);
     setPersonalInfo((prev) => ({ ...prev, [name]: value }));
   }
 
@@ -79,6 +79,7 @@ function App() {
         onItemChange={handleArrayItemChange}
         onDeleteItem={deleteArrayItem}
       />
+      <ResumeRender data={data} />
     </>
   );
 }
