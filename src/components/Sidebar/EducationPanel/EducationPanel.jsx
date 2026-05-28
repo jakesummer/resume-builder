@@ -1,5 +1,6 @@
 import { useState } from "react";
 import EducationForm from "./EducationForm/EducationForm.jsx";
+import SaveButton from "../../SaveButton/SaveButton.jsx";
 
 function Education({ school, onEdit, onDelete }) {
   return (
@@ -35,28 +36,30 @@ export default function EducationPanel({
   onChange,
   onDeleteItem,
 }) {
-  const [activeId, setActiveId] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState(-1); // current index of education data being edited
 
   function handleNewEducation() {
     onAddItem("education", initialEducationData);
-    setActiveId(data.length + 1);
+    setActiveIndex(data.length);
   }
 
   return (
     <>
-      {activeId === -1 &&
+      {activeIndex === -1 &&
         data.length > 0 &&
-        data.map((d) => {
-          return (
-            <Education
-              key={d.id}
-              name={d.school}
-              onDelete={() => onDeleteItem("education", d.id)}
-            />
-          );
-        })}
+        data
+          .filter((d) => d.school)
+          .map((d) => {
+            return (
+              <Education
+                key={d.id}
+                school={d.school}
+                onDelete={() => onDeleteItem("education", d.id)}
+              />
+            );
+          })}
 
-      {activeId === -1 && (
+      {activeIndex === -1 && (
         <button onClick={handleNewEducation}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>add</title>
@@ -66,8 +69,11 @@ export default function EducationPanel({
         </button>
       )}
 
-      {activeId !== -1 && (
-        <EducationForm data={data[activeId]} onFormChange={onChange} />
+      {activeIndex !== -1 && (
+        <>
+          <EducationForm data={data[activeIndex]} onFormChange={onChange} />
+          <SaveButton stateSetter={setActiveIndex} />
+        </>
       )}
     </>
   );
