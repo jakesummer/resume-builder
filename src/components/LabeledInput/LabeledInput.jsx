@@ -7,10 +7,12 @@ export default function LabeledInput({
   placeholderText,
   required = false,
 }) {
+  const InputTag = type === "textarea" ? "textarea" : "input";
+
   return (
     <div className="labeled-input">
       <label htmlFor={name}>{label}</label>
-      <input
+      <InputTag
         name={name}
         type={type}
         value={value}
