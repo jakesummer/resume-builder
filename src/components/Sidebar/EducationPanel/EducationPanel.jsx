@@ -4,7 +4,7 @@ import SaveButton from "../../SaveButton/SaveButton.jsx";
 
 function Education({ school, onEdit, onDelete }) {
   return (
-    <div className="education">
+    <div className="education-sidebar">
       <p>{school}</p>
       <button className="edit-education-btn" onClick={onEdit}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
