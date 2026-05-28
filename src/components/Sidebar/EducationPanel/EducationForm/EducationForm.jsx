@@ -12,32 +12,32 @@ export default function EducationForm({ data, onFormChange }) {
         label="School"
         name="school"
         value={data.school}
-        onChange={(e) => handleFormChange(e)}
+        onChange={handleFormChange}
         required={true}
       />
       <LabeledInput
         label="Degree"
         name="degree"
         value={data.degree}
-        onChange={(e) => handleFormChange(e)}
+        onChange={handleFormChange}
       />
       <LabeledInput
         label="Start Date"
         name="startDate"
         value={data.startDate}
-        onChange={(e) => handleFormChange(e)}
+        onChange={handleFormChange}
       />
       <LabeledInput
         label="End Date"
         name="endDate"
         value={data.endDate}
-        onChange={(e) => handleFormChange(e)}
+        onChange={handleFormChange}
       />
       <LabeledInput
         label="GPA"
         name="gpa"
         value={data.gpa}
-        onChange={(e) => handleFormChange(e)}
+        onChange={handleFormChange}
       />
     </form>
   );

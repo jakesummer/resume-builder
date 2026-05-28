@@ -12,39 +12,39 @@ export default function EducationForm({ data, onFormChange }) {
         label="Organization"
         name="organization"
         value={data.organization}
-        onChange={(e) => handleFormChange(e)}
+        onChange={handleFormChange}
         required={true}
       />
       <LabeledInput
         label="Title"
         name="positionTitle"
         value={data.positionTitle}
-        onChange={(e) => handleFormChange(e)}
+        onChange={handleFormChange}
       />
       <LabeledInput
         label="Start Date"
         name="startDate"
         value={data.startDate}
-        onChange={(e) => handleFormChange(e)}
+        onChange={handleFormChange}
       />
       <LabeledInput
         label="End Date"
         name="endDate"
         value={data.endDate}
-        onChange={(e) => handleFormChange(e)}
+        onChange={handleFormChange}
       />
       <LabeledInput
         label="Location"
         name="location"
         value={data.location}
-        onChange={(e) => handleFormChange(e)}
+        onChange={handleFormChange}
       />
       <LabeledInput
         label="Description"
         name="description"
         type="textarea"
         value={data.description}
-        onChange={(e) => handleFormChange(e)}
+        onChange={handleFormChange}
       />
     </form>
   );
