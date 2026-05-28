@@ -15,7 +15,7 @@ export default function Panel({
           {icon} {title}{" "}
           {isActive ? (
             <svg
-              class="panel-open-indicator"
+              className="panel-open-indicator"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -23,7 +23,7 @@ export default function Panel({
             </svg>
           ) : (
             <svg
-              class="panel-open-indicator"
+              className="panel-open-indicator"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
