@@ -1,5 +1,5 @@
 import EducationForm from "./EducationForm/EducationForm.jsx";
-import PanelDisplay from "../../PanelDisplay/PanelDisplay.jsx";
+import PanelDisplay from "../../../components/PanelDisplay/PanelDisplay.jsx";
 
 const initialEducationData = {
   school: "",

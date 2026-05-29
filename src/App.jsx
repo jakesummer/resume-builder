@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Sidebar from "./components/Sidebar/Sidebar.jsx";
-import ResumeRender from "./components/ResumeRender/ResumeRender.jsx";
+import Sidebar from "./layout/Sidebar/Sidebar.jsx";
+import ResumeRender from "./layout/ResumeRender/ResumeRender.jsx";
 
 const initialData = {
   personalInfo: {

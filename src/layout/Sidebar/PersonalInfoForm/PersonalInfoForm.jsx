@@ -1,4 +1,4 @@
-import LabeledInput from "../../LabeledInput/LabeledInput.jsx";
+import LabeledInput from "../../../components/LabeledInput/LabeledInput.jsx";
 
 export default function PersonalInfoForm({ data, onChange }) {
   return (

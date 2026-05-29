@@ -1,5 +1,5 @@
 import ExperienceForm from "./ExperienceForm/ExperienceForm.jsx";
-import PanelDisplay from "../../PanelDisplay/PanelDisplay.jsx";
+import PanelDisplay from "../../../components/PanelDisplay/PanelDisplay.jsx";
 
 const initialExperienceData = {
   organization: "",

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Panel from "../Panel/Panel.jsx";
+import Panel from "../../components/Panel/Panel.jsx";
 import PersonalInfoForm from "./PersonalInfoForm/PersonalInfoForm.jsx";
 import EducationPanel from "./EducationPanel/EducationPanel.jsx";
 import ExperiencePanel from "./ExperiencePanel/ExperiencePanel.jsx";
