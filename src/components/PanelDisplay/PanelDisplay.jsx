@@ -14,12 +14,13 @@ export default function PanelDisplay({
   const [activeId, setActiveId] = useState(-1); // current id of item being edited, -1 if none
   const activeItem = sectionData.find((d) => d.id === activeId);
 
-  const previewCardKey =
-    sectionName === "education"
-      ? "school"
-      : sectionName === "experience"
-        ? "organization"
-        : "";
+  const previewCardValues = {
+    education: "school",
+    experience: "organization",
+    projects: "projectName",
+  };
+
+  const previewCardKey = previewCardValues[sectionName];
 
   function handleNewItem() {
     const newId = onAddItem(sectionName, defaultItemData);
