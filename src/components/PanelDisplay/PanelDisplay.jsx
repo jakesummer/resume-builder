@@ -18,6 +18,7 @@ export default function PanelDisplay({
     education: "school",
     experience: "organization",
     projects: "projectName",
+    skills: "skillType",
   };
 
   const previewCardKey = previewCardValues[sectionName];
