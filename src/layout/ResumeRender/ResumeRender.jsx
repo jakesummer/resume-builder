@@ -3,6 +3,7 @@ import EducationRender from "./EducationRender/EducationRender.jsx";
 import ExperienceRender from "./ExperienceRender/ExperienceRender.jsx";
 import ProjectsRender from "./ProjectsRender/ProjectsRender.jsx";
 import SkillsRender from "./SkillsRender/SkillsRender.jsx";
+import "./ResumeRender.css";
 
 export default function ResumeRender({ data }) {
   return (

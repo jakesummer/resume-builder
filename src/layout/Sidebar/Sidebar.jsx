@@ -5,6 +5,7 @@ import EducationPanel from "./EducationPanel/EducationPanel.jsx";
 import ExperiencePanel from "./ExperiencePanel/ExperiencePanel.jsx";
 import ProjectsPanel from "./ProjectsPanel/ProjectsPanel.jsx";
 import SkillsPanel from "./SkillsPanel/SkillsPanel.jsx";
+import "./Sidebar.css";
 
 export default function Sidebar({
   data,
@@ -139,7 +140,7 @@ export default function Sidebar({
   }
 
   return (
-    <section>
+    <section className="sidebar">
       {panels.map((panel) => {
         const i = panel.index;
         return (
