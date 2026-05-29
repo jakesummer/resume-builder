@@ -6,7 +6,7 @@ export default function EducationRender({ data }) {
         <p className="education-degree">{d.degree}</p>
       </div>
       <div>
-        <p>
+        <p className="date">
           {d.startDate} {d.startDate && d.endDate && "-"} {d.endDate}
         </p>
         <p>{d.gpa && "GPA: " + d.gpa}</p>
