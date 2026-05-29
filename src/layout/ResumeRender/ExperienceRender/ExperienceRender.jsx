@@ -4,16 +4,16 @@ export default function ExperienceRender({ data }) {
       <div className="experience-info">
         <div>
           <h3 className="resume-item-heading">{d.organization}</h3>
-          <p className="experience-position-title">{d.positionTitle}</p>
+          <p className="resume-item-subheading">{d.positionTitle}</p>
         </div>
         <div>
-          <p className="date">
+          <p className="date resume-item-heading">
             {d.startDate} {d.startDate && d.endDate && "-"} {d.endDate}
           </p>
-          <p className="experience-location">{d.location}</p>
+          <p className="resume-item-subheading">{d.location}</p>
         </div>
       </div>
-      <div className="experience-description">{d.description}</div>
+      <div className="resume-item-description">{d.description}</div>
     </div>
   ));
 }
