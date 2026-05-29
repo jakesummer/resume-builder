@@ -2,6 +2,7 @@ import HeaderRender from "./HeaderRender/HeaderRender.jsx";
 import EducationRender from "./EducationRender/EducationRender.jsx";
 import ExperienceRender from "./ExperienceRender/ExperienceRender.jsx";
 import ProjectsRender from "./ProjectsRender/ProjectsRender.jsx";
+import SkillsRender from "./SkillsRender/SkillsRender.jsx";
 
 export default function ResumeRender({ data }) {
   return (
@@ -23,6 +24,12 @@ export default function ResumeRender({ data }) {
         <div className="projects-resume-section">
           <h2 className="resume-section-heading">Projects</h2>
           <ProjectsRender data={data.projects} />
+        </div>
+      )}
+      {data.skills.length > 0 && (
+        <div className="projects-resume-section">
+          <h2 className="resume-section-heading">Skills</h2>
+          <SkillsRender data={data.skills} />
         </div>
       )}
     </div>
