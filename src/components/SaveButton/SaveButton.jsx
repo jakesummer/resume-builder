@@ -1,6 +1,6 @@
-export default function SaveButton({ stateSetter }) {
+export default function SaveButton({ onSave }) {
   return (
-    <button className="save-btn" onClick={() => stateSetter(-1)}>
+    <button className="save-btn" onClick={() => onSave()}>
       Save
     </button>
   );

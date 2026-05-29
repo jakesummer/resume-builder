@@ -14,6 +14,7 @@ export default function EducationPanel({
   onAddItem,
   onChange,
   onDeleteItem,
+  clearEmptyEntries,
 }) {
   return (
     <>
@@ -23,6 +24,7 @@ export default function EducationPanel({
         defaultItemData={initialEducationData}
         onAddItem={onAddItem}
         onDeleteItem={onDeleteItem}
+        clearEmptyEntries={clearEmptyEntries}
       >
         {(activeItem) => (
           <EducationForm data={activeItem} onFormChange={onChange} />

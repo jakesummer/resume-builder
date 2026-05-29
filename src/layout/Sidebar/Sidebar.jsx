@@ -17,6 +17,7 @@ export default function Sidebar({
     {
       index: 0,
       title: "Personal Info",
+      sectionKey: "personalInfo",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <title>account</title>
@@ -33,6 +34,7 @@ export default function Sidebar({
     {
       index: 1,
       title: "Education",
+      sectionKey: "education",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" />
@@ -44,12 +46,14 @@ export default function Sidebar({
           onAddItem={onAddItem}
           onChange={onItemChange}
           onDeleteItem={onDeleteItem}
+          clearEmptyEntries={clearEmptyEntries}
         />
       ),
     },
     {
       index: 2,
       title: "Experience",
+      sectionKey: "experience",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M18 16H16V15H8V16H6V15H2V20H22V15H18V16M20 8H17V6C17 4.9 16.1 4 15 4H9C7.9 4 7 4.9 7 6V8H4C2.9 8 2 8.9 2 10V14H6V12H8V14H16V12H18V14H22V10C22 8.9 21.1 8 20 8M15 8H9V6H15V8Z" />
@@ -61,12 +65,32 @@ export default function Sidebar({
           onAddItem={onAddItem}
           onChange={onItemChange}
           onDeleteItem={onDeleteItem}
+          clearEmptyEntries={clearEmptyEntries}
         />
       ),
     },
   ];
 
+  function clearEmptyEntries() {
+    const sectionKey = panels.find((p) => p.index === activeIndex)?.sectionKey;
+
+    if (
+      !sectionKey ||
+      sectionKey === "personalInfo" ||
+      !data[sectionKey]?.length
+    )
+      return;
+
+    const emptyEntries = data[sectionKey].filter((entry) =>
+      Object.keys(entry).every((key) => key === "id" || !entry[key]),
+    );
+    emptyEntries.forEach((entry) => {
+      onDeleteItem(sectionKey, entry.id);
+    });
+  }
+
   function togglePanel(index) {
+    clearEmptyEntries();
     if (activeIndex === index) {
       setActiveIndex(-1);
     } else {

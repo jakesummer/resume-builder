@@ -15,6 +15,7 @@ export default function ExperiencePanel({
   onAddItem,
   onChange,
   onDeleteItem,
+  clearEmptyEntries,
 }) {
   return (
     <>
@@ -24,6 +25,7 @@ export default function ExperiencePanel({
         defaultItemData={initialExperienceData}
         onAddItem={onAddItem}
         onDeleteItem={onDeleteItem}
+        clearEmptyEntries={clearEmptyEntries}
       >
         {(activeItem) => (
           <ExperienceForm data={activeItem} onFormChange={onChange} />

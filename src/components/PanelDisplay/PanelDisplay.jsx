@@ -9,6 +9,7 @@ export default function PanelDisplay({
   onAddItem,
   onDeleteItem,
   children,
+  clearEmptyEntries,
 }) {
   const [activeId, setActiveId] = useState(-1); // current id of item being edited, -1 if none
   const activeItem = sectionData.find((d) => d.id === activeId);
@@ -25,22 +26,25 @@ export default function PanelDisplay({
     setActiveId(newId);
   }
 
+  function handleSave() {
+    setActiveId(-1);
+    clearEmptyEntries();
+  }
+
   return (
     <>
       {activeId === -1 &&
         sectionData.length > 0 &&
-        sectionData
-          .filter((d) => d[previewCardKey])
-          .map((d) => {
-            return (
-              <PreviewCard
-                key={d.id}
-                title={d[previewCardKey]}
-                onDelete={() => onDeleteItem(sectionName, d.id)}
-                onEdit={() => setActiveId(d.id)}
-              />
-            );
-          })}
+        sectionData.map((d) => {
+          return (
+            <PreviewCard
+              key={d.id}
+              title={d[previewCardKey]}
+              onDelete={() => onDeleteItem(sectionName, d.id)}
+              onEdit={() => setActiveId(d.id)}
+            />
+          );
+        })}
 
       {activeId === -1 && (
         <button onClick={handleNewItem}>
@@ -55,7 +59,7 @@ export default function PanelDisplay({
       {activeId !== -1 && (
         <>
           {children(activeItem)}
-          <SaveButton stateSetter={setActiveId} />
+          <SaveButton onSave={handleSave} />
         </>
       )}
     </>
