@@ -1,6 +1,7 @@
 import HeaderRender from "./HeaderRender/HeaderRender.jsx";
 import EducationRender from "./EducationRender/EducationRender.jsx";
 import ExperienceRender from "./ExperienceRender/ExperienceRender.jsx";
+import ProjectsRender from "./ProjectsRender/ProjectsRender.jsx";
 
 export default function ResumeRender({ data }) {
   return (
@@ -16,6 +17,12 @@ export default function ResumeRender({ data }) {
         <div className="experience-resume-section">
           <h2 className="resume-section-heading">Experience</h2>
           <ExperienceRender data={data.experience} />
+        </div>
+      )}
+      {data.projects.length > 0 && (
+        <div className="projects-resume-section">
+          <h2 className="resume-section-heading">Projects</h2>
+          <ProjectsRender data={data.projects} />
         </div>
       )}
     </div>
