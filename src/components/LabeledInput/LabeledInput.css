@@ -1,0 +1,20 @@
+.labeled-input {
+  --border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.labeled-input label {
+  font-weight: 700;
+}
+
+.labeled-input input {
+  border: 2px solid #4c585b;
+  border-radius: var(--border-radius);
+  padding: 0.3rem;
+  font-weight: 500;
+}
+
+.labeled-input input:focus {
+  outline: 3px solid #00b7b5;
+}

@@ -6,6 +6,7 @@ import ExperiencePanel from "./ExperiencePanel/ExperiencePanel.jsx";
 import ProjectsPanel from "./ProjectsPanel/ProjectsPanel.jsx";
 import SkillsPanel from "./SkillsPanel/SkillsPanel.jsx";
 import "./Sidebar.css";
+import "./Form.css";
 
 export default function Sidebar({
   data,

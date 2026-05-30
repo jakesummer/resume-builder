@@ -1,3 +1,5 @@
+import "./LabeledInput.css";
+
 export default function LabeledInput({
   label,
   name,

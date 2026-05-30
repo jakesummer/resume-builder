@@ -75,6 +75,7 @@ h6 {
 }
 
 :root {
+  --accent-color: #00b7b5;
   --bg-main: #e8e8e8;
   --bg-surface: white;
   --shadow-color: 0deg 0% 0%;
@@ -88,4 +89,8 @@ h6 {
 
 body {
   background-color: var(--bg-main);
+}
+
+*:focus {
+  outline: 3px solid var(--accent-color);
 }

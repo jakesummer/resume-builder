@@ -21,6 +21,10 @@
   border-radius: var(--border-radius);
 }
 
+.panel-btn:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .panel.active .panel-btn {
   margin-bottom: 0.5rem;
 }
