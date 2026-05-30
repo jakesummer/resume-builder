@@ -4,6 +4,15 @@
   width: 500px;
 }
 
+.panel .panel-open-indicator {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+.panel.active .panel-open-indicator {
+  transform: rotate(180deg);
+}
+
 .panel-btn {
   width: 100%;
   background-color: var(--bg-surface);
@@ -12,10 +21,24 @@
   border-radius: var(--border-radius);
 }
 
+.panel.active .panel-btn {
+  margin-bottom: 0.5rem;
+}
+
 .panel-content {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity 0.5s,
+    transform 0.5s;
+  border-radius: var(--border-radius);
+}
+
+.panel.active .panel-content {
+  opacity: 1;
+  transform: translateY(0);
   background-color: white;
   padding: 1rem 2rem 2rem;
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 .panel-btn h1 {

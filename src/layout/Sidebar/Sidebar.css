@@ -2,5 +2,5 @@
   font-family: var(--Raleway-font);
   display: flex;
   flex-direction: column;
-  gap: 75px;
+  gap: 1rem;
 }
