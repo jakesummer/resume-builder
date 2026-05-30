@@ -81,6 +81,8 @@ h6 {
   --bg-surface: white;
   --shadow-color: 0deg 0% 0%;
   --border-radius: 10px;
+  --panel-item-spacing: 0.7rem;
+  --active-outline: 3px solid var(--accent-color);
   --Raleway-font:
     "Raleway", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -94,7 +96,7 @@ body {
 }
 
 *:focus {
-  outline: 3px solid var(--accent-color);
+  outline: var(--active-outline);
 }
 
 .primary-btn {
