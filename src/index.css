@@ -63,3 +63,23 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+@font-face {
+  font-family: "Raleway";
+  src:
+    url("./assets/fonts/Raleway.woff2") format("woff2-variations"),
+    url("./assets/fonts/Raleway.woff") format("woff-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg-main: #e8e8e8;
+  --bg-surface: white;
+  --shadow-color: 0deg 0% 0%;
+}
+
+body {
+  background-color: var(--bg-main);
+}
