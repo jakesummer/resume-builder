@@ -1,6 +1,16 @@
 .resume {
-  min-width: 750px;
+  flex: 1;
+  max-width: 750px;
   aspect-ratio: calc(1 / sqrt(2));
   background-color: var(--bg-surface);
   box-shadow: -1px 21px 43px -18px rgba(0, 0, 0, 0.86);
+}
+
+@media (max-width: 1000px) {
+  .resume {
+    flex: none;
+    width: 90vw;
+    max-width: none;
+    margin-bottom: 40px;
+  }
 }

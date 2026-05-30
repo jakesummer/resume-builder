@@ -1,11 +1,11 @@
 .panel {
   --border-radius: 10px;
   padding: 1rem 2rem;
-  width: 500px;
+  width: 100%;
 }
 
 .panel .panel-open-indicator {
-  transform: rotate(0deg);
+  transform: rotate(0);
   transition: transform 0.3s;
 }
 
@@ -38,7 +38,7 @@
   opacity: 1;
   transform: translateY(0);
   background-color: white;
-  padding: 1rem 2rem 2rem;
+  padding: 2rem 2rem;
 }
 
 .panel-btn h1 {
@@ -46,9 +46,11 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  font-size: 1.7rem;
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
+  color: black;
 }
 
 .panel svg {
   width: 1em;
+  height: 1em;
 }

@@ -1,5 +1,16 @@
 #root {
   display: flex;
-  justify-content: space-between;
-  padding: 4rem 6rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6rem;
+  padding: 3% 4%;
+}
+
+@media (max-width: 1000px) {
+  #root {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+  }
 }
