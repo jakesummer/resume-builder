@@ -20,28 +20,12 @@
   border-radius: var(--border-radius);
 }
 
-.panel-btn:active {
-  -webkit-tap-highlight-color: transparent;
-}
-
 .panel.active .panel-btn {
   margin-bottom: var(--panel-item-spacing);
 }
 
-.panel-content {
-  opacity: 0;
-  transform: translateY(-8px);
-  transition:
-    opacity 0.5s,
-    transform 0.5s;
-  border-radius: var(--border-radius);
-}
-
-.panel.active .panel-content {
-  opacity: 1;
-  transform: translateY(0);
-  background-color: white;
-  padding: 2rem 2rem;
+.panel-btn:active {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .panel-btn h1 {
@@ -60,7 +44,7 @@
   fill: var(--accent-color);
 }
 
-.panel svg {
+.panel-btn svg {
   width: 1em;
   height: 1em;
 }
@@ -70,6 +54,19 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity 0.5s,
+    transform 0.5s;
+  border-radius: var(--border-radius);
+}
+
+.panel.active .panel-content {
+  opacity: 1;
+  transform: translateY(0);
+  background-color: white;
+  padding: 2rem 2rem;
 }
 
 .panel-content form {
