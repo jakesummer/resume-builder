@@ -11,7 +11,7 @@ export default function Panel({
   const Heading = `h${headingLevel}`;
 
   return (
-    <section className={`panel  ${isActive ? "active" : ""}`}>
+    <section className={`panel${isActive ? " active" : ""}`}>
       <button onClick={onClick} className="panel-btn">
         <Heading>
           {icon} {title}
