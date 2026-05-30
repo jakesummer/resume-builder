@@ -1,3 +1,5 @@
+import "./Panel.css";
+
 export default function Panel({
   isActive,
   onClick,
@@ -10,7 +12,7 @@ export default function Panel({
 
   return (
     <section className="panel">
-      <button onClick={onClick}>
+      <button onClick={onClick} className="panel-btn">
         <Heading>
           {icon} {title}{" "}
           {isActive ? (
@@ -32,7 +34,7 @@ export default function Panel({
           )}{" "}
         </Heading>
       </button>
-      {isActive && children}
+      {isActive && <div className="panel-content">{children}</div>}
     </section>
   );
 }

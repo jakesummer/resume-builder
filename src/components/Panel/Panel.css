@@ -1,0 +1,31 @@
+.panel {
+  --border-radius: 10px;
+  padding: 1rem 2rem;
+  width: 500px;
+}
+
+.panel-btn {
+  width: 100%;
+  background-color: var(--bg-surface);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+}
+
+.panel-content {
+  background-color: white;
+  padding: 1rem 2rem 2rem;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.panel-btn h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.7rem;
+}
+
+.panel svg {
+  width: 1em;
+}

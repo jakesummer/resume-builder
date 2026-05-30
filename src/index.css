@@ -78,6 +78,12 @@ h6 {
   --bg-main: #e8e8e8;
   --bg-surface: white;
   --shadow-color: 0deg 0% 0%;
+  --Raleway-font:
+    "Raleway", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --CMU-Serif-font:
+    "CMU Serif", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 body {
