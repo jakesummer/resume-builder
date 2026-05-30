@@ -76,9 +76,11 @@ h6 {
 
 :root {
   --accent-color: #00b7b5;
+  --accent-color-light: #adf6f4;
   --bg-main: #e8e8e8;
   --bg-surface: white;
   --shadow-color: 0deg 0% 0%;
+  --border-radius: 10px;
   --Raleway-font:
     "Raleway", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -93,4 +95,16 @@ body {
 
 *:focus {
   outline: 3px solid var(--accent-color);
+}
+
+.primary-btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color-light);
+  border: 3px solid var(--accent-color);
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s;
+}
+
+.primary-btn:hover {
+  background-color: var(--accent-color);
 }

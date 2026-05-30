@@ -1,5 +1,4 @@
 .labeled-input {
-  --border-radius: 5px;
   display: flex;
   flex-direction: column;
 }

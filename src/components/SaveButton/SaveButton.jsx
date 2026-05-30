@@ -1,6 +1,6 @@
 export default function SaveButton({ onSave }) {
   return (
-    <button className="save-btn" onClick={() => onSave()}>
+    <button className="save-btn primary-btn" onClick={() => onSave()}>
       Save
     </button>
   );
