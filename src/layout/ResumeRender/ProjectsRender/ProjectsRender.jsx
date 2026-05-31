@@ -1,4 +1,5 @@
 import Description from "../../../components/Description/Description.jsx";
+import "./ProjectsRender.css";
 
 export default function ProjectsRender({ data }) {
   return data.map((d) => (
@@ -7,7 +8,7 @@ export default function ProjectsRender({ data }) {
         <div>
           <h3 className="resume-item-heading">{d.projectName}</h3>
           <a href="d.linkUrl" className="project-link">
-            {d.linkUrl && " | " + (d.linkText ? d.linkText : d.linkUrl)}
+            {d.linkUrl && (d.linkText ? d.linkText : d.linkUrl)}
           </a>
         </div>
         <div className="align-right">

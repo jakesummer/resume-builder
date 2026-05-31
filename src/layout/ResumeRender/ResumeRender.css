@@ -57,3 +57,12 @@
   display: flex;
   justify-content: space-between;
 }
+
+.resume a {
+  color: black;
+  text-decoration-thickness: 1px;
+}
+
+.resume a:focus {
+  outline: none;
+}

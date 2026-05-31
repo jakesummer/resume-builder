@@ -1,0 +1,20 @@
+.projects-resume-item div:has(.project-link) {
+  display: flex;
+  align-items: center;
+  gap: 10pt;
+}
+
+.project-link {
+  text-decoration: none;
+  font-style: italic;
+  position: relative;
+}
+
+.project-link::before {
+  content: "|";
+  font-weight: bold;
+  position: absolute;
+  font-style: normal;
+  left: -6.5pt;
+  pointer-events: none;
+}
