@@ -1,0 +1,8 @@
+.education-resume-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gpa {
+  font-style: normal;
+}

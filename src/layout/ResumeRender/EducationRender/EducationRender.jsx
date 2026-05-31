@@ -1,3 +1,5 @@
+import "./EducationRender.css";
+
 export default function EducationRender({ data }) {
   return data.map((d) => (
     <div key={d.id} className="education-resume-item resume-item">
@@ -9,7 +11,7 @@ export default function EducationRender({ data }) {
         <p className="date resume-item-heading">
           {d.startDate} {d.startDate && d.endDate && "-"} {d.endDate}
         </p>
-        <p class="resume-item-subheading">{d.gpa && "GPA: " + d.gpa}</p>
+        <p class="resume-item-subheading gpa">{d.gpa && "GPA: " + d.gpa}</p>
       </div>
     </div>
   ));
