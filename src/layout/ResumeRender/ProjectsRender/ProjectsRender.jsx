@@ -8,7 +8,7 @@ export default function ProjectsRender({ data }) {
             {d.linkUrl && " | " + (d.linkText ? d.linkText : d.linkUrl)}
           </a>
         </div>
-        <div>
+        <div className="align-right">
           <p className="resume-item-heading">{d.tools}</p>
         </div>
       </div>

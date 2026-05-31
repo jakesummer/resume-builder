@@ -7,7 +7,7 @@ export default function EducationRender({ data }) {
         <h3 className="resume-item-heading">{d.school}</h3>
         <p className="resume-item-subheading">{d.degree}</p>
       </div>
-      <div>
+      <div className="align-right">
         <p className="date resume-item-heading">
           {d.startDate} {d.startDate && d.endDate && "-"} {d.endDate}
         </p>
