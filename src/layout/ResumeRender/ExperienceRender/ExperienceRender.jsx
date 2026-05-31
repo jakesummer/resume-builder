@@ -1,3 +1,5 @@
+import Description from "../../../components/Description/Description.jsx";
+
 export default function ExperienceRender({ data }) {
   return data.map((d) => (
     <div key={d.id} className="experience-resume-item resume-item">
@@ -13,7 +15,7 @@ export default function ExperienceRender({ data }) {
           <p className="resume-item-subheading">{d.location}</p>
         </div>
       </div>
-      <div className="resume-item-description">{d.description}</div>
+      {d.description && <Description description={d.description} />}
     </div>
   ));
 }

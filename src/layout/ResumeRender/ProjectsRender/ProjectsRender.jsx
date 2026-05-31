@@ -1,3 +1,5 @@
+import Description from "../../../components/Description/Description.jsx";
+
 export default function ProjectsRender({ data }) {
   return data.map((d) => (
     <div key={d.id} className="projects-resume-item resume-item">
@@ -12,7 +14,7 @@ export default function ProjectsRender({ data }) {
           <p className="resume-item-heading">{d.tools}</p>
         </div>
       </div>
-      <div className="resume-item-description">{d.description}</div>
+      {d.description && <Description description={d.description} />}
     </div>
   ));
 }
