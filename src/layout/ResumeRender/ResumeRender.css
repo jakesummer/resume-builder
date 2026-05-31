@@ -8,6 +8,8 @@
 .resume {
   background-color: var(--bg-surface);
   transform-origin: top left;
+  padding: 0.5in;
+  font-family: var(--CMU-Serif-font);
 }
 
 @media (max-width: 1000px) {
