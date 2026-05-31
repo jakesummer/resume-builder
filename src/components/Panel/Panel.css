@@ -23,10 +23,6 @@
   margin-bottom: 0.7rem;
 }
 
-.panel-btn:active {
-  -webkit-tap-highlight-color: transparent;
-}
-
 .panel-btn h1 {
   display: flex;
   justify-content: center;
