@@ -1,6 +1,6 @@
 export default function EducationRender({ data }) {
   return data.map((d) => (
-    <div key={d.id} className="education-resume-item">
+    <div key={d.id} className="education-resume-item resume-item">
       <div>
         <h3 className="resume-item-heading">{d.school}</h3>
         <p className="resume-item-subheading">{d.degree}</p>

@@ -1,6 +1,6 @@
 export default function ExperienceRender({ data }) {
   return data.map((d) => (
-    <div key={d.id} className="experience-resume-item">
+    <div key={d.id} className="experience-resume-item resume-item">
       <div className="experience-info">
         <div>
           <h3 className="resume-item-heading">{d.organization}</h3>

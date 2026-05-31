@@ -44,25 +44,25 @@ export default function ResumeRender({ data }) {
       >
         <HeaderRender data={data.personalInfo} />
         {data.education.length > 0 && (
-          <div className="education-resume-section">
+          <div className="education-resume-section resume-section">
             <h2 className="resume-section-heading">Education</h2>
             <EducationRender data={data.education} />
           </div>
         )}
         {data.experience.length > 0 && (
-          <div className="experience-resume-section">
+          <div className="experience-resume-section resume-section">
             <h2 className="resume-section-heading">Experience</h2>
             <ExperienceRender data={data.experience} />
           </div>
         )}
         {data.projects.length > 0 && (
-          <div className="projects-resume-section">
+          <div className="projects-resume-section resume-section">
             <h2 className="resume-section-heading">Projects</h2>
             <ProjectsRender data={data.projects} />
           </div>
         )}
         {data.skills.length > 0 && (
-          <div className="projects-resume-section">
+          <div className="projects-resume-section resume-section">
             <h2 className="resume-section-heading">Skills</h2>
             <SkillsRender data={data.skills} />
           </div>

@@ -20,3 +20,29 @@
     margin-bottom: 40px;
   }
 }
+
+.resume-section {
+  margin-bottom: 5px;
+}
+
+.resume-section-heading {
+  font-weight: normal;
+  font-size: 16pt;
+  font-variant-caps: small-caps;
+  border-bottom: 1.5px solid black;
+  margin-bottom: 3px;
+}
+
+.resume-item {
+  padding: 0 8px;
+}
+
+.resume-item-heading {
+  font-weight: bold;
+  font-size: 13pt;
+}
+
+.resume-item-subheading {
+  font-size: 12.5pt;
+  font-style: italic;
+}
