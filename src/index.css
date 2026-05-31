@@ -115,3 +115,7 @@ button {
 .primary-btn:hover {
   background-color: var(--accent-color);
 }
+
+svg {
+  width: 1em;
+}
