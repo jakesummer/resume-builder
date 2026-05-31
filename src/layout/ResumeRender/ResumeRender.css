@@ -1,13 +1,17 @@
-.resume {
+.resume-wrapper {
   flex: 1;
-  max-width: 750px;
-  aspect-ratio: calc(1 / sqrt(2));
+  width: 50%;
+  max-width: 816px;
+  box-shadow: 0px 21px 43px -18px rgba(0, 0, 0, 0.86);
+}
+
+.resume {
   background-color: var(--bg-surface);
-  box-shadow: -1px 21px 43px -18px rgba(0, 0, 0, 0.86);
+  transform-origin: top left;
 }
 
 @media (max-width: 1000px) {
-  .resume {
+  .resume-wrapper {
     flex: none;
     width: 90vw;
     max-width: none;
