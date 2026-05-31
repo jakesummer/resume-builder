@@ -52,3 +52,8 @@
   font-size: 12.5pt;
   font-style: italic;
 }
+
+.resume-item-info {
+  display: flex;
+  justify-content: space-between;
+}

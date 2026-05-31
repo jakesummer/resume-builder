@@ -1,7 +1,7 @@
 export default function ProjectsRender({ data }) {
   return data.map((d) => (
     <div key={d.id} className="projects-resume-item resume-item">
-      <div className="projects-info">
+      <div className="projects-info resume-item-info">
         <div>
           <h3 className="resume-item-heading">{d.projectName}</h3>
           <a href="d.linkUrl" className="project-link">
