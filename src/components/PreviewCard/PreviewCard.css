@@ -1,0 +1,53 @@
+.preview-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--bg-surface);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.preview-card:last-child {
+  margin-bottom: var(--gap);
+}
+
+.preview-card svg {
+  width: 1.1em;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1em;
+}
+
+.btn-container button {
+  --transition: background-color 0.3s, fill 0.3s;
+  padding: 0.2rem;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+}
+
+.preview-card-delete-btn {
+  border: 3px solid var(--remove-color);
+  fill: var(--remove-color);
+  transition: var(--transition);
+}
+
+.preview-card-delete-btn:hover {
+  background-color: var(--remove-color);
+  fill: var(--bg-surface);
+}
+
+.preview-card-edit-btn {
+  border: 3px solid var(--edit-color);
+  fill: var(--edit-color);
+  transition: var(--transition);
+}
+
+.preview-card-edit-btn:hover {
+  background-color: var(--edit-color);
+  fill: var(--bg-surface);
+}

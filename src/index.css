@@ -79,9 +79,10 @@ h6 {
   --accent-color-light: #adf6f4;
   --bg-main: #e8e8e8;
   --bg-surface: white;
+  --remove-color: #ff6060;
+  --edit-color: #0055da;
   --shadow-color: 0deg 0% 0%;
   --border-radius: 10px;
-  --panel-item-spacing: 0.7rem;
   --active-outline: 3px solid var(--accent-color);
   --Raleway-font:
     "Raleway", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
@@ -97,6 +98,10 @@ body {
 
 *:focus {
   outline: var(--active-outline);
+}
+
+button {
+  cursor: pointer;
 }
 
 .primary-btn {

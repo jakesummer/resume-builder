@@ -36,18 +36,20 @@ export default function PanelDisplay({
 
   return (
     <>
-      {activeId === -1 &&
-        sectionData.length > 0 &&
-        sectionData.map((d) => {
-          return (
-            <PreviewCard
-              key={d.id}
-              title={d[previewCardKey]}
-              onDelete={() => onDeleteItem(sectionName, d.id)}
-              onEdit={() => setActiveId(d.id)}
-            />
-          );
-        })}
+      {activeId === -1 && sectionData.length > 0 && (
+        <div className="preview-card-container">
+          {sectionData.map((d) => {
+            return (
+              <PreviewCard
+                key={d.id}
+                title={d[previewCardKey]}
+                onDelete={() => onDeleteItem(sectionName, d.id)}
+                onEdit={() => setActiveId(d.id)}
+              />
+            );
+          })}
+        </div>
+      )}
 
       {activeId === -1 && (
         <button className="new-item-btn primary-btn" onClick={handleNewItem}>
