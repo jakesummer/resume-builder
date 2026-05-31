@@ -35,7 +35,7 @@ export default function ResumeRender({ data }) {
       }}
     >
       <div
-        className="resume"
+        id="resume"
         style={{
           width: "816px",
           height: "1056px",

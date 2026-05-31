@@ -5,7 +5,7 @@
   box-shadow: 0px 21px 43px -18px rgba(0, 0, 0, 0.86);
 }
 
-.resume {
+#resume {
   background-color: var(--bg-surface);
   transform-origin: top left;
   padding: 0.5in;
@@ -58,11 +58,11 @@
   justify-content: space-between;
 }
 
-.resume a {
+#resume a {
   color: black;
   text-decoration-thickness: 1px;
 }
 
-.resume a:focus {
+#resume a:focus {
   outline: none;
 }
