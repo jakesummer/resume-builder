@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 9pt;
+}
+
+.full-name {
+  font-size: 26pt;
+}
+
+.header-links {
+  display: flex;
+  gap: 12pt;
+  font-size: 12pt;
+}
+
+.header-links a {
+  display: flex;
+  gap: 3pt;
+  color: black;
+  position: relative;
+  text-decoration-thickness: 1px;
+}
+
+.header-links a:focus {
+  outline: none;
+}
+
+.header-links a:not(:last-child)::after {
+  content: "|";
+  font-weight: bold;
+  position: absolute;
+  right: -7.5pt;
+  pointer-events: none;
+}
