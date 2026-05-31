@@ -1,0 +1,6 @@
+.resume-item-description {
+  font-size: 11pt;
+  overflow: wrap;
+  padding: 0 25pt;
+  word-break: break-all;
+}

@@ -57,7 +57,3 @@
   display: flex;
   justify-content: space-between;
 }
-
-.resume-item-description {
-  white-space: pre-wrap;
-}

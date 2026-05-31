@@ -1,3 +1,5 @@
+import "./Description.css";
+
 export default function Description({ description }) {
   return (
     <ul className="resume-item-description">
