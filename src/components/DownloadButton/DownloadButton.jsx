@@ -13,6 +13,21 @@ export default function DownloadButton() {
     try {
       const prevTransform = resume.style.transform;
       resume.style.transform = "scale(1)";
+
+      const resumeRect = resume.getBoundingClientRect();
+      const links = Array.from(resume.querySelectorAll("a[href]")).map(
+        (link) => {
+          const rect = link.getBoundingClientRect();
+          return {
+            href: link.href,
+            x: rect.left - resumeRect.left,
+            y: rect.top - resumeRect.top,
+            w: rect.width,
+            h: rect.height,
+          };
+        },
+      );
+
       const imgData = await toPng(resume, {
         pixelRatio: 2,
         width: 816,
@@ -28,6 +43,11 @@ export default function DownloadButton() {
       resume.style.transform = prevTransform;
 
       pdf.addImage(imgData, "PNG", 0, 0, 816, 1056);
+
+      for (const { href, x, y, w, h } of links) {
+        pdf.link(x, y, w, h, { url: href });
+      }
+
       pdf.save("resume.pdf");
     } finally {
       setLoading(false);
