@@ -7,9 +7,11 @@ export default function ProjectsRender({ data }) {
       <div className="projects-info resume-item-info">
         <div>
           <h3 className="resume-item-heading">{d.projectName}</h3>
-          <a href={d.linkUrl} className="project-link">
-            {d.linkUrl && (d.linkText ? d.linkText : d.linkUrl)}
-          </a>
+          {d.linkUrl && (
+            <a href={d.linkUrl} className="project-link">
+              {d.linkUrl && (d.linkText ? d.linkText : d.linkUrl)}
+            </a>
+          )}
         </div>
         <div className="align-right">
           <p className="resume-item-heading">{d.tools}</p>
