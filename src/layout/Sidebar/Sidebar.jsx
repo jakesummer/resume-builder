@@ -5,6 +5,7 @@ import EducationPanel from "./EducationPanel/EducationPanel.jsx";
 import ExperiencePanel from "./ExperiencePanel/ExperiencePanel.jsx";
 import ProjectsPanel from "./ProjectsPanel/ProjectsPanel.jsx";
 import SkillsPanel from "./SkillsPanel/SkillsPanel.jsx";
+import DownloadButton from "../../components/DownloadButton/DownloadButton.jsx";
 import "./Sidebar.css";
 import "./Form.css";
 
@@ -142,6 +143,7 @@ export default function Sidebar({
 
   return (
     <section className="sidebar">
+      <DownloadButton />
       {panels.map((panel) => {
         const i = panel.index;
         return (
