@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toPng } from "html-to-image";
 import { jsPDF } from "jspdf";
+import "./DownloadButton.css";
 
 export default function DownloadButton() {
   const [loading, setLoading] = useState(false);
@@ -55,7 +56,11 @@ export default function DownloadButton() {
   };
 
   return (
-    <button onClick={handleDownload} disabled={loading}>
+    <button
+      onClick={handleDownload}
+      disabled={loading}
+      className="download-btn"
+    >
       {loading ? (
         <>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

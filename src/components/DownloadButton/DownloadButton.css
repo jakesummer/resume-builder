@@ -1,0 +1,28 @@
+.download-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: center;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  background: #21c2bf;
+  background: linear-gradient(
+    126deg,
+    rgba(33, 194, 191, 1) 0%,
+    rgba(91, 222, 217, 1) 77%
+  );
+  transition: padding 0.3s;
+  color: black;
+}
+
+.download-btn:hover {
+  padding: 1rem 3.5rem;
+}
+
+.download-btn:focus {
+  outline: none;
+}
