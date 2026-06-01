@@ -7,7 +7,7 @@ export default function ProjectsRender({ data }) {
       <div className="projects-info resume-item-info">
         <div>
           <h3 className="resume-item-heading">{d.projectName}</h3>
-          <a href="d.linkUrl" className="project-link">
+          <a href={d.linkUrl} className="project-link">
             {d.linkUrl && (d.linkText ? d.linkText : d.linkUrl)}
           </a>
         </div>
