@@ -10,9 +10,11 @@ Live Site: https://resume-builder-3.netlify.app/
 - Fully polished and animated UI
 - Fully responsive UI which works on all screen sizes
 
-## Built With
+## Tech Stack
 
-- **Frontend:** React.js, Vite, Javascript
+- **Framework:** React.js
+- **Build Tool:** Vite
+- **Language:** JavaScript
 - **Styling:** CSS
 - **PDF Generation:** [html-to-image](https://github.com/bubkoo/html-to-image), [jsPDF](https://github.com/parallax/jsPDF)
 
